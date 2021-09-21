@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uploadpart/upload/notes.dart';
 import 'package:uploadpart/upload/questionp.dart';
+import 'package:uploadpart/upload/syllabus.dart';
 
 class UploadDoc extends StatelessWidget {
   @override
@@ -60,7 +61,10 @@ class UploadDoc extends StatelessWidget {
               height: 50,
               width: 300,
               child: FloatingActionButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      new MaterialPageRoute(builder: (context) => Syllabus()));
+                },
                 backgroundColor: Colors.yellow[700],
                 shape: BeveledRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0)),

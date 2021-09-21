@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:uploadpart/upload/questionp.dart';
 
 class Notes extends StatelessWidget {
   @override
@@ -69,6 +70,26 @@ class Notes extends StatelessWidget {
                   border: OutlineInputBorder(),
                   hintText: 'Enter Author name',
                   labelText: 'Enter Author name',
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 50,
+              width: 300,
+              child: FloatingActionButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      new MaterialPageRoute(builder: (context) => Questionp()));
+                },
+                backgroundColor: Colors.yellow[700],
+                shape: BeveledRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0)),
+                child: Text(
+                  'NEXT',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
